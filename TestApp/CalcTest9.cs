@@ -15,7 +15,7 @@ namespace TestApp.Test
         [Test]
         public void plus_should_work()
         {
-            Assert.That(4 + 1, Is.EqualTo(4), "Wrong result");
+            Assert.That(4 + 1, Is.EqualTo(5), "Wrong result");
         }
     }
 }
