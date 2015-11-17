@@ -3,6 +3,7 @@
 namespace TestApp.Test
 {
     [TestFixture]
+    [Ignore]
     class CalcTest4
     {
         [Test]
