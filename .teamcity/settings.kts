@@ -7,6 +7,7 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.NUnitStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetMsBuild
 import jetbrains.buildServer.configs.kotlin.buildSteps.nuGetInstaller
 import jetbrains.buildServer.configs.kotlin.buildSteps.nunit
+import jetbrains.buildServer.configs.kotlin.projectFeatures.dockerRegistry
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
@@ -51,6 +52,12 @@ project {
                 "Owner" to "daria.krupkina@jetbrains.com"
             )
             source = Source("ami-02761680ebacdaa95")
+        }
+        dockerRegistry {
+            id = "PROJECT_EXT_57"
+            name = "Docker Registry (Local)"
+            userName = "dariakrup"
+            password = "credentialsJSON:f542aff8-3ffb-4261-aa16-ec09ee610f31"
         }
         amazonEC2CloudProfile {
             id = "amazon-14"
