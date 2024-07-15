@@ -38,6 +38,10 @@ project {
 
     buildType(Build)
 
+    params {
+        password("password", "credentialsJSON:bf8a6afe-cfb9-485f-b640-33b16dbaaaf5")
+    }
+
     features {
         amazonEC2CloudImage {
             id = "PROJECT_EXT_53"
