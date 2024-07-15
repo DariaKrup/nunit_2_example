@@ -39,6 +39,7 @@ project {
     buildType(Build)
 
     params {
+        password("new_password", "credentialsJSON:92c8fa2f-9cbf-4e69-b02d-348e75cabf6a")
         password("password", "credentialsJSON:bf8a6afe-cfb9-485f-b640-33b16dbaaaf5")
     }
 
