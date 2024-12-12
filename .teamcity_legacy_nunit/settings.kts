@@ -5,6 +5,7 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.NUnitStep
 import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetMsBuild
 import jetbrains.buildServer.configs.kotlin.buildSteps.nuGetInstaller
 import jetbrains.buildServer.configs.kotlin.buildSteps.nunit
+import jetbrains.buildServer.configs.kotlin.buildSteps.nunitConsole
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
@@ -29,7 +30,7 @@ To debug in IntelliJ Idea, open the 'Maven Projects' tool window (View
 'Debug' option is available in the context menu for the task.
 */
 
-version = "2024.07"
+version = "2024.12"
 
 project {
 
@@ -67,6 +68,12 @@ object Build : BuildType({
             runtimeVersion = NUnitStep.RuntimeVersion.v4_0
             includeTests = """TestApp\bin\Debug\TestApp.dll"""
             reduceTestFeedback = true
+        }
+        nunitConsole {
+            name = "sdfsd"
+            id = "sdfsd"
+            nunitPath = "%teamcity.tool.NUnit.Console.DEFAULT%"
+            includeTests = "dd"
         }
     }
 
