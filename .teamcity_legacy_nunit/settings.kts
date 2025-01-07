@@ -60,6 +60,7 @@ object Build : BuildType({
         }
         dotnetMsBuild {
             id = "dotnet"
+            enabled = false
             projects = "TestApp.sln"
             version = DotnetMsBuildStep.MSBuildVersion.CrossPlatform
             args = "-restore -noLogo"
