@@ -58,7 +58,6 @@ object Build : BuildType({
             version = DotnetMsBuildStep.MSBuildVersion.V17
             args = "-restore -noLogo"
             sdk = "4.6"
-            dockerImage = "mcr.microsoft.com/dotnet/framework/sdk:3.5"
             dockerImagePlatform = DotnetMsBuildStep.ImagePlatform.Windows
         }
         nunit {
