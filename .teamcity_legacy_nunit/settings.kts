@@ -6,6 +6,7 @@ import jetbrains.buildServer.configs.kotlin.buildSteps.dotnetMsBuild
 import jetbrains.buildServer.configs.kotlin.buildSteps.nuGetInstaller
 import jetbrains.buildServer.configs.kotlin.buildSteps.nunit
 import jetbrains.buildServer.configs.kotlin.buildSteps.nunitConsole
+import jetbrains.buildServer.configs.kotlin.buildSteps.script
 import jetbrains.buildServer.configs.kotlin.triggers.vcs
 
 /*
@@ -73,6 +74,10 @@ object Build : BuildType({
             id = "sdfsd"
             nunitPath = "%teamcity.tool.NUnit.Console.DEFAULT%"
             includeTests = "dd"
+        }
+        script {
+            id = "simpleRunner"
+            scriptContent = "msbuild TestApp.sln"
         }
     }
 
