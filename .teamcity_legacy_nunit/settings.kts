@@ -56,7 +56,7 @@ object Build : BuildType({
         dotnetMsBuild {
             id = "dotnet"
             projects = "TestApp.sln"
-            version = DotnetMsBuildStep.MSBuildVersion.V17
+            version = DotnetMsBuildStep.MSBuildVersion.CrossPlatform
             args = "-restore -noLogo"
             sdk = "4.6"
             dockerImagePlatform = DotnetMsBuildStep.ImagePlatform.Windows
