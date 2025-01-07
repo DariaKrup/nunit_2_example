@@ -58,7 +58,6 @@ object Build : BuildType({
             projects = "TestApp.sln"
             version = DotnetMsBuildStep.MSBuildVersion.CrossPlatform
             args = "-restore -noLogo"
-            sdk = "4.6"
             dockerImagePlatform = DotnetMsBuildStep.ImagePlatform.Windows
         }
         nunit {
