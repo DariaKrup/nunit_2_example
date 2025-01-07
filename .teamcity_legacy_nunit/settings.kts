@@ -54,6 +54,10 @@ object Build : BuildType({
             updatePackages = updateParams {
             }
         }
+        script {
+            id = "simpleRunner"
+            scriptContent = "msbuild TestApp.sln"
+        }
         dotnetMsBuild {
             id = "dotnet"
             projects = "TestApp.sln"
@@ -74,10 +78,6 @@ object Build : BuildType({
             id = "sdfsd"
             nunitPath = "%teamcity.tool.NUnit.Console.DEFAULT%"
             includeTests = "dd"
-        }
-        script {
-            id = "simpleRunner"
-            scriptContent = "msbuild TestApp.sln"
         }
     }
 
