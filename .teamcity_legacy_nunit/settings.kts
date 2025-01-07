@@ -64,7 +64,7 @@ object Build : BuildType({
         nunit {
             name = "NUnit: deprecated, dll"
             id = "NUnit_deprecated_dll"
-            nunitVersion = NUnitStep.NUnitVersion.NUnit_2_6_4
+            nunitPath = "%teamcity.tool.NUnit.Console.DEFAULT%"
             runtimeVersion = NUnitStep.RuntimeVersion.v4_0
             includeTests = """TestApp\bin\Debug\TestApp.dll"""
             reduceTestFeedback = true
