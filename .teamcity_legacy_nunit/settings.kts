@@ -47,6 +47,7 @@ object Build : BuildType({
     steps {
         nuGetInstaller {
             id = "jb_nuget_installer"
+            enabled = false
             toolPath = "%teamcity.tool.NuGet.CommandLine.DEFAULT%"
             projects = "TestApp.sln"
             updatePackages = updateParams {
